@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Install packages defined in the requirements.txt file
-RUN pip install -r requirements.txt
+RUN cd techtrends && pip install -r requirements.txt
 
 # Initialize the database with pre-defined posts
 RUN python init_db.py
