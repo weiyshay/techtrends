@@ -5,10 +5,10 @@ LABEL maintainer="Katie Gamanji"
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY . /app
+COPY techtrends /app
 
 # Install packages defined in the requirements.txt file
-RUN cd techtrends && pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Initialize the database with pre-defined posts
 RUN python init_db.py
